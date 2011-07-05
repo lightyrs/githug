@@ -10,7 +10,7 @@ def interface
     puts "\nYou have successfully donated $#{amount} to #{user.chomp}!"
     puts "Thank you for supporting free and open source software."
   elsif response == "n"
-    puts "Canceled donation."
+    puts "\nCanceled donation."
   else
     interface
   end

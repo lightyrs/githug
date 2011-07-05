@@ -45,7 +45,7 @@ task :githug do
   end
 
   def red(text)
-    "\e[31m#{text}\e[0m"
+    "\e[31m\e[1m#{text}\e[0m\e[0m"
   end
   
   def purple(text)

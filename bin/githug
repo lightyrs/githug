@@ -1,3 +1,19 @@
 #!/usr/bin/env ruby
 
-puts "Now you can git hug"
+def interface
+  amount = ARGV.shift
+  user = `git config --get user.name`
+
+  puts "Donate $#{amount} to #{user.chomp}? (y/n)"
+  response = $stdin.gets.chomp
+  if response == "y"
+    puts "\nYou have successfully donated $#{amount} to #{user.chomp}!"
+    puts "Thank you for supporting free and open source software."
+  elsif response == "n"
+    puts "Canceled donation."
+  else
+    interface
+  end
+end
+
+interface
